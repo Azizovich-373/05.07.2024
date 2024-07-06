@@ -13,11 +13,11 @@ form.onsubmit = (e) => {
         age: new FormData(form).get('age'), 
     }
     console.log(student);
-    if(student.name.length !== 0) {
+    if(student.name.length !== 0 && student.age >= 18 ) {
         students.push(student)
         reload(students, main, Student)
         return  
     } 
 
-    alert('Заполните форму')
+    alert('Напишите имя или вам еще нет 18!')
 }
